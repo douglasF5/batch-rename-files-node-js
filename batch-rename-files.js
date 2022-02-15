@@ -7,7 +7,7 @@ const imageDirPath = resolve(__dirname, "images");
 //Get the files
 const files = readdirSync(imageDirPath);
 
-//Loop thrhough each file renaming it
+//Loop through each file renaming it
 for (let i = 0; i < files.length; i++) {
   rename(
     `${imageDirPath}/${files[i]}`,
@@ -15,3 +15,5 @@ for (let i = 0; i < files.length; i++) {
     (err) => (err !== null ? console.log(err) : "")
   );
 }
+//If you don't need the i variable as index to your files,
+//you may want to use a forEach loop instead of a For loop
